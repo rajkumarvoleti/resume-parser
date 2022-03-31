@@ -1,6 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
-import HiringButton from "./Buttons/HiringButton";
-import WorkButton from "./Buttons/WorkButton";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/system/Box";
+import HiringButton from "../Buttons/HiringButton";
+import WorkButton from "../Buttons/WorkButton";
+
+// Join us section
 
 export default function Join() {
   return (

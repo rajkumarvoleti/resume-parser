@@ -1,12 +1,33 @@
-import { Box, Typography, TextField, Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 import ContactImg from "../images/contact.svg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
+import { useState } from "react";
+
+// a simple contact form UI
 
 export default function Contact() {
+  const [data, setData] = useState({
+    name: {
+      value: "",
+      error: null,
+    },
+    email: {
+      value: "",
+      error: null,
+    },
+    message: {
+      value: "",
+      error: null,
+    },
+  });
+
   return (
     <Box
       className="center"

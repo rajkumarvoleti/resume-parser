@@ -1,6 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import Screening from "../images/screening.svg";
+import Screening from "../../images/screening.svg";
+
+// feature section
 
 const style = {
   display: "flex",
@@ -16,6 +19,7 @@ const style = {
 };
 
 export default function Feature({ left }) {
+  // here the flexDirection of this components changes according to "left" prop
   return (
     <Box
       className="properWidth"

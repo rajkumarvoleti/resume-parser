@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import Uppy from "@uppy/core";
@@ -19,11 +19,18 @@ export default function BigCircle() {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  
+  // It uses uppy for file uploading. Please change the endpoint after the backend is ready. Check the uppy react documentation for further information about drag drop feature
+
   const uppy = useUppy(() => {
     return new Uppy().use(XHRUpload, {
       endpoint: "https://v2.convertapi.com/upload ",
     });
   });
+
+  const startAnimation = () => {
+    // setProgress((prev) => prev + 2);
+  };
 
   useEffect(() => {
     uppy.on("progress", () => {
@@ -39,8 +46,9 @@ export default function BigCircle() {
       console.log("error");
     });
     uppy.on("file-added", (e) => {
+      setUploading(true);
+      startAnimation();
       console.log(e);
-      uppy.upload();
     });
   }, []);
 

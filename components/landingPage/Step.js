@@ -1,5 +1,8 @@
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import { Box, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/system/Box";
+
+// step UI
 
 export default function Step() {
   return (

@@ -12,9 +12,15 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../images/logo3.png";
 import Image from "next/image";
 
+// App Bar UI
+
+// app bar menu content
 const pages = ["Home", "About", "Products", "Contact Us"];
 
 export default function AppBarComp({ scrollTo }) {
+    // scroll To function helps to scroll to the particular section of a page. More information about this can be obtained in it's parent component
+
+  // please check documentation for Appbar MUI for better understanding.
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -40,13 +46,13 @@ export default function AppBarComp({ scrollTo }) {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{ mr: 2, ml: 3, display: { xs: "none", md: "flex" } }}
           >
             <Image
               src={Logo.src}
               alt="Thanks Buddy"
-              width="150px"
-              height="70px"
+              width="200px"
+              height="85px"
             />
           </Typography>
 
@@ -109,8 +115,8 @@ export default function AppBarComp({ scrollTo }) {
             <Image
               src={Logo.src}
               alt="Thanks Buddy"
-              width="150px"
-              height="70px"
+              width="200px"
+              height="85px"
             />
           </Typography>
           <Box
@@ -137,6 +143,7 @@ export default function AppBarComp({ scrollTo }) {
                   fontSize: "14px",
                   fontWeight: "normal",
                   px: "20px",
+                  "&:hover": { backgroundColor: "darkBlue1", color: "white" },
                 }}
               >
                 {page}

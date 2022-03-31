@@ -1,5 +1,7 @@
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Link from "next/link";
+
+// this button is used to redirect user to resume parser website
 
 export default function HiringButton() {
   return (

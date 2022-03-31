@@ -1,10 +1,15 @@
-import { Button, Divider, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import AppBarComp from "./AppBarComp";
-import HiringButton from "./Buttons/HiringButton";
-import WorkButton from "./Buttons/WorkButton";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/system/Box";
+import AppBarComp from "../AppBarComp";
+import HiringButton from "../Buttons/HiringButton";
+import WorkButton from "../Buttons/WorkButton";
+
+// header UI
 
 export default function Header({ scrollTo }) {
+  // scroll To function helps to scroll to the particular section of a page. More information about this can be obtained in it's parent component
   return (
     <Box className="center">
       <AppBarComp scrollTo={scrollTo} />

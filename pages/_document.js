@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import createEmotionCache from "../lib/createEmotionCache";
 
+// document.js incldues all the things that are requires in a normal header file, like fonts, styles and some required nextJS scripts
 export default class MyDocument extends Document {
   render() {
     return (

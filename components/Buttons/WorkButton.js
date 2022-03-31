@@ -1,14 +1,11 @@
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Link from "next/link";
-import { RefferalFormLink } from "../../lib/helper";
 
-export default function HiringButton() {
+// this button is used to redirect the user to candidate form
+
+export default function WorkButton() {
   return (
-    <a
-      style={{ textDecoration: "none" }}
-      href={RefferalFormLink}
-      target="_blank"
-    >
+    <Link style={{ textDecoration: "none" }} href="/refferalForm">
       <Button
         sx={{
           width: { xs: "100%", lg: "200px" },
@@ -20,6 +17,6 @@ export default function HiringButton() {
       >
         I'm open to work
       </Button>
-    </a>
+    </Link>
   );
 }
