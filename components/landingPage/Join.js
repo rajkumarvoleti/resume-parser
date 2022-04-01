@@ -23,10 +23,10 @@ export default function Join() {
           fontFamily="Montserrat, sans-serif"
           fontSize="40px"
         >
-          Want To Experience The Power of AI In Recruitment? Start With Thanks
-          Buddy.
+          Liked you've seen! or sounds so good to be true! Get in touch to hire
+          or get hired the thanks buddy way!
         </Typography>
-        <Typography
+        {/* <Typography
           fontSize="17px"
           textAlign="center"
           sx={{ color: "text.secondary", lineHeight: "30px", my: "30px" }}
@@ -35,7 +35,7 @@ export default function Join() {
           This is a modern AI Recruiting Software that automates the candidate
           sourcing, matches the right candidates to the right jobs, gives
           insight into your hiring process, and improves the quality of hire.
-        </Typography>
+        </Typography> */}
         <Box
           sx={{
             my: "30px",

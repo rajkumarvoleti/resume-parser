@@ -7,6 +7,7 @@ import nProgress from "nprogress";
 import createEmotionCache from "../lib/createEmotionCache";
 import lightTheme from "../styles/theme/lightTheme";
 import "../styles/nprogress.css";
+import "../styles/arrow.css";
 import GlobalCss from "../lib/GlobalCss";
 
 const clientSideEmotionCache = createEmotionCache();

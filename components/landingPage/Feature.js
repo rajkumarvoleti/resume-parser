@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import Screening from "../../images/screening.svg";
+import Screening from "../../images/Picture1.png";
 
 // feature section
 
@@ -9,50 +9,28 @@ const style = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
+  my: "80px",
   ".item": {
     width: "450px",
     mx: "20px",
   },
-  ".item > *": {
-    textAlign: { lg: "left", xs: "center" },
-  },
 };
 
-export default function Feature({ left }) {
+export default function Feature({ left, src, children }) {
   // here the flexDirection of this components changes according to "left" prop
   return (
     <Box
       className="properWidth"
-      sx={{ ...style, flexDirection: `${left ? "row" : "row-reverse"}` }}
+      sx={{
+        ...style,
+        flexDirection: `${left ? "row" : "row-reverse"}`,
+      }}
     >
-      <Box className="item" sx={{ width: "100%" }}>
-        <Image src={Screening} alt="Screening" width="480px" />
+      <Box className="item center" sx={{ width: "100%" }}>
+        <Image src={src} alt="Screening" />
       </Box>
-      <Box className="item center" sx={{ textAlign: "center" }}>
-        <Typography
-          fontFamily="Montserrat, sans-serif"
-          fontSize="30px"
-          fontWeight="700"
-          lineHeight="48px"
-        >
-          Find Right Candidates For Right Job Using AI For Resume Screening
-        </Typography>
-        <Typography
-          fontFamily="Montserrat, sans-serif"
-          fontSize="16px"
-          fontWeight="300"
-          lineHeight="30px"
-          color="text.secondary"
-          my="30px"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam,
-          autem. Animi doloremque harum eos cupiditate unde suscipit voluptate
-          libero earum asperiores maiores. Doloremque iusto itaque fugiat
-          reiciendis cum voluptatum consequuntur? Fugit, quia blanditiis cumque
-          obcaecati rerum nihil. Dolorem minus consectetur iste eaque inventore
-          saepe distinctio, ab at adipisci rem aliquid, esse, corrupti
-          perspiciatis laborum eveniet. Dolor esse vel suscipit consequatur!
-        </Typography>
+      <Box className="item center" sx={{ textAlign: "center", m: "50px" }}>
+        {children}
       </Box>
     </Box>
   );

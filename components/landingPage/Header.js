@@ -31,7 +31,7 @@ export default function Header({ scrollTo }) {
             fontSize: { xs: "36px", lg: "64px" },
           }}
         >
-          Hire Top Candidates Faster With AI Recruiting Software
+          Keep calm & hire the right talent Thanks buddy way
         </Typography>
         <Divider sx={{ my: "20px", width: "700px", maxWidth: "90vw" }} />
         <Typography
