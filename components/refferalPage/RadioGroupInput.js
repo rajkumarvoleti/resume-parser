@@ -6,8 +6,8 @@ import FormControl from "@mui/material/FormControl";
 import Typography from "@mui/material/Typography";
 import { useForm } from "../../lib/refferalFormState";
 
-export default function RadioGroupInput({ name }) {
-  const [data, setData] = React.useState({ value: "0", error: null });
+export default function RadioGroupInput({ name, options }) {
+  const [data, setData] = React.useState({ value: options[0], error: null });
   // data consists of the data present in the input field and handleChange function handles the changes in the input field
   const { getFormData, updateForm } = useForm();
   // please check useForm function in lib for better understaning of the hook
@@ -22,72 +22,23 @@ export default function RadioGroupInput({ name }) {
 
   return (
     <FormControl>
-      <RadioGroup onChange={handleChange} value={data.value}>
-        <FormControlLabel
-          value="0"
-          control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
-          label={
-            <Typography
-              fontSize="22px"
-              sx={{ pl: "10px" }}
-              color="text.secondary"
-            >
-              Fresher
-            </Typography>
-          }
-        />
-        <FormControlLabel
-          value="1-4"
-          control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
-          label={
-            <Typography
-              fontSize="22px"
-              sx={{ pl: "10px" }}
-              color="text.secondary"
-            >
-              1 - 4
-            </Typography>
-          }
-        />
-        <FormControlLabel
-          value="4-7"
-          control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
-          label={
-            <Typography
-              fontSize="22px"
-              sx={{ pl: "10px" }}
-              color="text.secondary"
-            >
-              4 - 7
-            </Typography>
-          }
-        />
-        <FormControlLabel
-          value="7-10"
-          control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
-          label={
-            <Typography
-              fontSize="22px"
-              sx={{ pl: "10px" }}
-              color="text.secondary"
-            >
-              7 - 10
-            </Typography>
-          }
-        />
-        <FormControlLabel
-          value="10+"
-          control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
-          label={
-            <Typography
-              fontSize="22px"
-              sx={{ pl: "10px" }}
-              color="text.secondary"
-            >
-              10+
-            </Typography>
-          }
-        />
+      <RadioGroup onChange={handleChange}>
+        {options.map((opt) => (
+          <FormControlLabel
+            value={opt}
+            key={opt}
+            control={<Radio size="medium" sx={{ color: "darkBlue1" }} />}
+            label={
+              <Typography
+                fontSize="22px"
+                sx={{ pl: "10px" }}
+                color="text.secondary"
+              >
+                {opt}
+              </Typography>
+            }
+          />
+        ))}
       </RadioGroup>
       {data.error !== null && <Typography>*please select an option</Typography>}
     </FormControl>

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "../../lib/refferalFormState";
 import inViewPort from "in-viewport";
 
-export default function TextInput({ placeHolder, name }) {
+export default function TextInput({ placeHolder, name, type }) {
   const [data, setData] = useState({ value: "", error: null });
   // data consists of the data present in the input field and handleChange function handles the changes in the input field
   const { getFormData, updateForm, validate } = useForm();
@@ -35,13 +35,14 @@ export default function TextInput({ placeHolder, name }) {
     };
   }, []);
 
-  // please check the MUI documentation for the textField component 
+  // please check the MUI documentation for the textField component
 
   return (
     <TextField
       ref={inputRef}
       onChange={handleChange}
       error={data.error !== null}
+      type={type || ""}
       helperText={data.error}
       sx={{ fontSize: "50px" }}
       fullWidth

@@ -7,7 +7,7 @@ import { useForm } from "../../lib/refferalFormState";
 
 // AutoComplete UI
 
-export default function AutoCompleteInput({ placeHolder, name }) {
+export default function AutoCompleteInput({ placeHolder, name, options }) {
   const [data, setData] = useState({ value: "", error: null });
   const { getFormData, updateForm, validate } = useForm();
   const inputRef = useRef(null);
@@ -45,7 +45,7 @@ export default function AutoCompleteInput({ placeHolder, name }) {
     <Autocomplete
       freeSolo
       disablePortal
-      options={["a", "b", "c"]}
+      options={options}
       onSelect={handleChange}
       renderInput={(params) => (
         <TextField
