@@ -6,9 +6,10 @@ import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 import ContactImg from "../images/contact.svg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState } from "react";
+import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
 
 // a simple contact form UI
 
@@ -27,6 +28,10 @@ export default function Contact() {
       error: null,
     },
   });
+
+  const redirect = () => {
+    alert("redirecting");
+  };
 
   return (
     <Box
@@ -126,9 +131,16 @@ export default function Contact() {
           mt: "50px",
         }}
       >
-        <LinkedInIcon sx={{ fontSize: "35px" }} color="primary" />
-        <EmailIcon sx={{ fontSize: "35px" }} color="error" />
-        <FacebookIcon sx={{ fontSize: "35px" }} color="primary" />
+        <IconButton>
+          <Link href="https://www.linkedin.com/company/thanksbuddy/">
+            <a target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon sx={{ fontSize: "45px" }} color="primary" />
+            </a>
+          </Link>
+        </IconButton>
+        <IconButton>
+          <EmailIcon sx={{ fontSize: "45px" }} color="error" />
+        </IconButton>
       </Box>
     </Box>
   );

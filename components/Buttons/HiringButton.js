@@ -1,12 +1,13 @@
 import Button from "@mui/material/Button";
-import Link from "next/link";
+import Box from "@mui/material/Box";
 
 // this button is used to redirect user to resume parser website
 
-export default function HiringButton() {
+export default function HiringButton({ scrollTo }) {
   return (
-    <Link href="/resumeparser">
+    <Box>
       <Button
+        onClick={() => scrollTo("Contact Us")}
         sx={{
           width: { xs: "100%", lg: "200px" },
           my: { xs: "10px", lg: 0 },
@@ -17,6 +18,6 @@ export default function HiringButton() {
       >
         I'm Hiring
       </Button>
-    </Link>
+    </Box>
   );
 }

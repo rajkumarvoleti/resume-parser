@@ -24,13 +24,11 @@ export default function Home() {
   // these refs are made to help the onclick events in the menu bar
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
-  const productsRef = useRef(null);
   const contactRef = useRef(null);
 
   const refs = {
     Home: homeRef,
-    About: aboutRef,
-    Products: productsRef,
+    "How It Works": aboutRef,
     "Contact Us": contactRef,
   };
 
@@ -55,14 +53,14 @@ export default function Home() {
         {/* <Box ref={aboutRef}>
           <About />
         </Box> */}
-        <Arrow />
+        {/* <Arrow /> */}
         <Box ref={aboutRef} className="center" sx={{ width: "100%" }}>
           <Typography
             sx={{
               textAlign: "center",
               fontFamily: "Montserrat, sans-serif",
-              fontSize: "40px",
-              fontWeight: "500",
+              fontSize: "52px",
+              fontWeight: "600",
               mt: "50px",
             }}
           >
@@ -200,7 +198,7 @@ export default function Home() {
           <Steps />
         </Box> */}
         <Box sx={{ my: "100px" }} className="center">
-          <Join />
+          <Join scrollTo={scrollTo} />
         </Box>
         <Box ref={contactRef}>
           <Contact />

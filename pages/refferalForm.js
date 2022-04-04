@@ -291,7 +291,7 @@ export default function refferalFormPage() {
             <InputComp
               question="Skillset"
               name="skills"
-              desc="Type top 5 skills that describe you the best (space separated)"
+              desc="Type top 5 skills that describe you the best (comma separated)"
               number={23}
             >
               <TextInput placeHolder="your answer" name="skills" />

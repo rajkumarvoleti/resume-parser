@@ -31,10 +31,12 @@ export default function Header({ scrollTo }) {
             fontSize: { xs: "36px", lg: "64px" },
           }}
         >
-          Keep calm & hire the right talent Thanks buddy way
+          Keep calm & experience hiring
+          <br />
+          Thanks buddy way
         </Typography>
         <Divider sx={{ my: "20px", width: "700px", maxWidth: "90vw" }} />
-        <Typography
+        {/* <Typography
           fontSize="17px"
           textAlign="center"
           sx={{ color: "text.secondary", lineHeight: "30px" }}
@@ -43,7 +45,7 @@ export default function Header({ scrollTo }) {
           This is a modern AI Recruiting Software that automates the candidate
           sourcing, matches the right candidates to the right jobs, gives
           insight into your hiring process, and improves the quality of hire.
-        </Typography>
+        </Typography> */}
         <Box
           sx={{
             my: "50px",
@@ -54,7 +56,7 @@ export default function Header({ scrollTo }) {
             flexDirection: { xs: "column", lg: "row" },
           }}
         >
-          <HiringButton />
+          <HiringButton scrollTo={scrollTo} />
           <WorkButton />
         </Box>
       </Box>

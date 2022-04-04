@@ -15,10 +15,10 @@ import Image from "next/image";
 // App Bar UI
 
 // app bar menu content
-const pages = ["Home", "About", "Products", "Contact Us"];
+const pages = ["Home", "How It Works", "Contact Us"];
 
 export default function AppBarComp({ scrollTo }) {
-    // scroll To function helps to scroll to the particular section of a page. More information about this can be obtained in it's parent component
+  // scroll To function helps to scroll to the particular section of a page. More information about this can be obtained in it's parent component
 
   // please check documentation for Appbar MUI for better understanding.
   const [anchorElNav, setAnchorElNav] = React.useState(null);

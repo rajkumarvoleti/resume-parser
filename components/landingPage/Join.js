@@ -6,7 +6,7 @@ import WorkButton from "../Buttons/WorkButton";
 
 // Join us section
 
-export default function Join() {
+export default function Join({ scrollTo }) {
   return (
     <Box className="center">
       <Box
@@ -46,7 +46,7 @@ export default function Join() {
             flexDirection: { xs: "column", lg: "row" },
           }}
         >
-          <HiringButton />
+          <HiringButton scrollTo={scrollTo} />
           <WorkButton />
         </Box>
       </Box>
