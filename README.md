@@ -4,6 +4,8 @@
   <ol>
     <li>
       <a href="#file-structure">File Structure</a>
+    </li>
+    <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -25,10 +27,11 @@
 </details>
 
 ## File Structure
+
     .
-    ├── ...                        
+    ├── ...
     ├── components                      # All the components required used in the app
-    │   ├── Buttons                     # Button components 
+    │   ├── Buttons                     # Button components
     │   ├── landingPage                 # Landing page components
     │   ├── refferalPage                # Refferal page components
     │   └── ...                         # Common components
@@ -85,7 +88,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/thanks-buddy/thanksBuddyFrontend.git
    ```
 2. Install NPM packages
    ```sh
@@ -108,6 +111,6 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Contact
 
-Your Name - [@your_email](https://twitter.com/your_username) - email@example.com
+thanksbuddycontact@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/thanks-buddy/thanksBuddyFrontend](https://github.com/thanks-buddy/thanksBuddyFrontend)
