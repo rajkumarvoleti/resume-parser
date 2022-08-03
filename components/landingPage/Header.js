@@ -16,10 +16,11 @@ export default function Header({ scrollTo }) {
       <Box
         className="center"
         sx={{
-          width: "840px",
+          width: "950px",
           maxWidth: "95vw",
+          minHeight: "80vh",
           textAlign: "center",
-          mt: { xs: "20px", sm: "40px", lg: "60px" },
+          mb: "50px",
         }}
       >
         <Typography

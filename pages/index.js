@@ -78,7 +78,7 @@ export default function Home() {
               <Typography
                 fontFamily="Montserrat, sans-serif"
                 fontSize="36px"
-                fontWeight="600"
+                fontWeight="800"
                 lineHeight="48px"
                 sx={{ color: "darkBlue1" }}
               >
@@ -132,7 +132,7 @@ export default function Home() {
               <Typography
                 fontFamily="Montserrat, sans-serif"
                 fontSize="36px"
-                fontWeight="600"
+                fontWeight="800"
                 lineHeight="48px"
                 sx={{ color: "darkBlue1" }}
               >
@@ -163,7 +163,7 @@ export default function Home() {
               <Typography
                 fontFamily="Montserrat, sans-serif"
                 fontSize="36px"
-                fontWeight="600"
+                fontWeight="800"
                 lineHeight="48px"
                 sx={{ color: "darkBlue1" }}
               >
